@@ -1,11 +1,11 @@
 {
   "name": "MaJeD BoJaN",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "blog post",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "MaJeD BoJaN <bojanmajed@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/MajedBojan/majedbojan.github.io/issues"
   },
   "dependencies": {
     "gatsby": "^2.23.12",
