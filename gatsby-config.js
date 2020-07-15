@@ -1,15 +1,15 @@
 module.exports = {
   pathPrefix: "/myblog",
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `BoJaN's Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `MaJeD BoJaN`,
+      summary: `who loves Ruby on rake, React under JS and Aspiring to have Elixir on phoenix.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `majedbojan`,
     },
   },
   plugins: [
