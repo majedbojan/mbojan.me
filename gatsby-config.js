@@ -4,7 +4,7 @@ module.exports = {
     title: `BoJaN's Blog`,
     author: {
       name: `MaJeD BoJaN`,
-      summary: `who loves Ruby on rake, React under JS and Aspiring to have Elixir on phoenix.`,
+      summary: `who loves Ruby on rake, ReactJS and Aspiring to have Elixir on phoenix.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,

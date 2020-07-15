@@ -4,7 +4,7 @@ date: "2019-10-20T22:12:03.284Z"
 description: "Standard JSON API response format"
 ---
 
-![Chinese Salty Egg](./salty_egg.jpg)
+![Chinese Salty Egg](./jsonapi.png)
 
 Recently one of my friend asked me if there is any standard response we follow for API response, this question asked too much from beginner developers especially those are new in term of API
 I was really interested by this question as I have to design a JSON API everyday. I found myself wondering if there is any standard over there.

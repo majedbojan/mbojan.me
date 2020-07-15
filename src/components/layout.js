@@ -59,11 +59,11 @@ const Layout = ({ location, title, children }) => {
       <header>{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, Find me on
         {` `}
-        <a href="https://www.twitter.com/majedbojan"> Twitter   </a>
-        <a href="https://www.github.com/majedbojan">   Github </a>
-        <a href="https://www.linkedin.com/in/majedbojan/">  Linkedin</a>
+        <a href="https://www.twitter.com/majedbojan"> &nbsp;Twitter&nbsp;   </a>
+        <a href="https://www.github.com/majedbojan">   Github &nbsp;</a>
+        <a href="https://www.linkedin.com/in/majedbojan/">  Linkedin&nbsp;</a>
       </footer>
     </div>
   )
