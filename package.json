@@ -1,9 +1,9 @@
 {
-  "name": "MaJeD BoJaN",
+  "name": "majed-bojan-blog",
   "private": true,
   "description": "blog post",
   "version": "0.1.0",
-  "author": "MaJeD BoJaN <bojanmajed@gmail.com",
+  "author": "majed bojan <bojanmajed@gmail.com",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
