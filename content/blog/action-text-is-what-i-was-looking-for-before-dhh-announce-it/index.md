@@ -6,7 +6,7 @@ description: "Action Text is what i was looking for before DHH announce it"
 
 ![Rails](./action_text.jpeg)
 
-couple hours before DHH announcing that the Rails team is working towards bringing Trix, the rich text editor from Basecamp into Rails applications by default as Action Text. I was googling a simple way to use the editor in my blog and I found this video that he showed quickly how to get started with Action Text by building a blog with a rich text area. This shows off some other things coming to Rails 6, as the default use of web-packer. Action Text hooks closely into Active Storage which was only new in Rails 5.2.
+Couple hours before DHH announcing that the Rails team is working towards bringing Trix, the rich text editor from Basecamp into Rails applications by default as Action Text. I was googling a simple way to use the editor in my blog and I found this video that he showed quickly how to get started with Action Text by building a blog with a rich text area. This shows off some other things coming to Rails 6, as the default use of web-packer. Action Text hooks closely into Active Storage which was only new in Rails 5.2.
 
 ## Take a look at the video and see what you think
 
