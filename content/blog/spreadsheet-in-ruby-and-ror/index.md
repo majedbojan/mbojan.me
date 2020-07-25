@@ -6,5 +6,5 @@ description: "Spreadsheet in ruby and ror"
 
 ## Hey, there's good news and bad news
 
-- Bad news: The article still not imported from [Medium](https://medium.com/@bojanmajed/spreadsheet-in-ruby-and-ror-e911dfab3128)
-- Good news: You can read it in [Medium](https://medium.com/@bojanmajed/spreadsheet-in-ruby-and-ror-e911dfab3128) platform while we are importing it.
+- Bad news: We are working on migration the story from [Medium](https://medium.com/@bojanmajed/awesome-server-status-message-53db02a0b168) to our website
+- Good news: You can continue reading it there [Medium](https://medium.com/@bojanmajed/spreadsheet-in-ruby-and-ror-e911dfab3128) platform while we are importing it.

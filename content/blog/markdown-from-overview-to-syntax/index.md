@@ -1,5 +1,5 @@
 ---
-title: Markdown from syntax to site
+title: Markdown from Overview to syntax
 date: "2020-07-25T22:12:03.284Z"
 description: "Introduction to markdown syntax"
 ---
@@ -233,7 +233,7 @@ Then, anywhere in the document, you define your link label like this, on a line 
 
 Emphasis
 
-Markdown treats asterisks (*) and underscores (_) as indicators of emphasis. Text wrapped with one * or _ will be wrapped with an HTML <em> tag; double *'s or _'s will be wrapped with an HTML <strong> tag. E.g., this input:
+Markdown treats asterisks (*) and underscores (_) as indicators of emphasis.
 
 ```markdown
 *single asterisks*
@@ -270,3 +270,68 @@ Inline image syntax looks like this:
 
 ![Alt text](/path/to/img.jpg "Optional title")
 ```
+## Videos
+
+Markdown provides two ways for video links to be embedded in markdown files.
+
+The first way is to trick the user into thinking the video is on the markdown file with a picture. It sounds like an ad trick, it's not perfect, but it works and it's funny!
+```markdown
+[![alt text](./maxresdefault.jpg)](https://www.youtube.com/watch?v=HJZ9TnKrt7Q "Alpha preview: Action Text for Rails 6")
+```
+Like:
+
+[![alt text](./maxresdefault.jpg)](https://www.youtube.com/watch?v=HJZ9TnKrt7Q "Alpha preview: Action Text for Rails 6")
+
+and the second one is to display videos from YouTube
+This method works for YouTube videos and any other embed video within an `<iframe>` tag.
+
+```markdown
+<!-- blank line -->
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/enMumwvLAug" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+<!-- blank line -->
+```
+
+## Miscellaneous
+
+Markdown supports a shortcut style for creating "automatic" links for URLs and email addresses: simply surround the URL or email address with angle brackets. What this means is that if you want to show the actual text of a URL or email address, and also have it be a clickable link, you can do this:
+
+```markdown
+<http://example.com/>
+```
+
+Markdown will turn this into:
+
+```html
+<a href="http://example.com/">http://example.com/</a>
+```
+
+### Backslash Escapes
+
+Markdown allows you to use backslash escapes to generate literal characters which would otherwise have special meaning in Markdown's formatting syntax. For example, if you wanted to surround a word with literal asterisks (instead of an HTML <em> tag), you can use backslashes before the asterisks, like this:
+
+```markdown
+\*literal asterisks\*
+```
+
+Markdown provides backslash escapes for the following characters:
+
+```markdown
+\   backslash
+`   backtick
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark
+```
+
+Last thing i would like to share with is the great extension [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) that has been added in vscode to preview that mark down files while you're writing in it
+
+![Preview](./preview.png)
