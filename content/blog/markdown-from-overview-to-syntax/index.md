@@ -332,6 +332,6 @@ _   underscore
 !   exclamation mark
 ```
 
-Last thing i would like to share with is the great extension [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) that has been added in vscode to preview that mark down files while you're writing in it
+Last thing i would like to share with you is the great extension [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) that has been added in vscode extentions to preview that markdown files while you're writing in it.
 
 ![Preview](./mark_down_preview.gif)
