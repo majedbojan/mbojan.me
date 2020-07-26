@@ -334,4 +334,4 @@ _   underscore
 
 Last thing i would like to share with is the great extension [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) that has been added in vscode to preview that mark down files while you're writing in it
 
-![Preview](./preview.png)
+![Preview](./mark_down_preview.gif)
