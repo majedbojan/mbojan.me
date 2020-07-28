@@ -4,6 +4,8 @@ date: "2020-07-25T22:12:03.284Z"
 description: "Introduction to markdown syntax"
 ---
 
+![cover](./cover4.png)
+
 ## Overview
 
 Markdown is intended to be as easy-to-read and easy-to-write as is feasible. Markdown's syntax is intended for one purpose: to be used as a format for writing for the web.
@@ -332,6 +334,6 @@ _   underscore
 !   exclamation mark
 ```
 
-Last thing i would like to share with you is the great extension [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) that has been added in vscode extentions to preview that markdown files while you're writing in it.
+The last thing I would like to share with you is the great extension [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) that has been added in vscode extensions to preview that markdown files while you're writing in it.
 
 ![Preview](./mark_down_preview.gif)
