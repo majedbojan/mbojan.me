@@ -1,7 +1,7 @@
 ---
-title: The best ruby style guides from Shopify and Airbnb
+title: Styling guidelines for ruby by Shopify and Airbnb
 date: "2020-08-10T22:12:03.284Z"
-description: "Ruby Style Guide"
+description: "The best guidelines style for ruby by Shopify and Airbnb"
 ---
 
 ![Rails](./cover.gif)
