@@ -6,5 +6,5 @@ description: "Ruby Style Guide"
 
 
 
-## References
-- [ruby-style-guide](https://github.com/Shopify/ruby-style-guide)
+## Reference
+[ruby-style-guide](https://github.com/Shopify/ruby-style-guide)
