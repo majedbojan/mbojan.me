@@ -337,3 +337,7 @@ _   underscore
 The last thing I would like to share with you is the great extension [Markdown preview](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) that has been added in vscode extensions to preview that markdown files while you're writing in it.
 
 ![Preview](./mark_down_preview.gif)
+
+## References
+- [markdown guide basic syntax](https://www.markdownguide.org/basic-syntax/)
+- [How to Change the Styling of a Word in a Line of Text on Squarespace](https://www.megangodardcardon.com/blog/change-style-one-word-squarespace)
