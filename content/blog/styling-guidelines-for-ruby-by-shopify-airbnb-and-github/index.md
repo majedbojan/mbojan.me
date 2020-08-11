@@ -142,9 +142,8 @@ end
 ```
 
 - Prefer proc over Proc.new
-<img src="smiley.gif" alt="Smiley face" width="42" height="42" style="vertical-align:middle;margin:50px 0px">
-
 - Prefix with `_` unused block parameters and local variables. It's also acceptable to use just `_`.
+
 ```ruby
 # bad
 def compute_thing(thing)
@@ -202,6 +201,7 @@ end
 
 ```
 - Never use then for multi-line if/unless.
+
 ```ruby
 # bad
 if some_condition then
@@ -266,6 +266,7 @@ else
 end
 ```
 - Don't use parentheses around the condition of an `if/unless/while`.
+
 ```ruby
 # bad
 if (x > 10)
@@ -404,6 +405,7 @@ end.map { |name| name.upcase }
 
 Some will argue that multiline chaining would look okay with the use of `{...}`, but they should ask themselves if this code is really readable and whether the block's content can be extracted into nifty methods.
 - Use shorthand self assignment operators whenever applicable.
+
 ```ruby
 # bad
 x = x + y
@@ -465,6 +467,7 @@ end
 ```
 
 - Avoid return where not required
+
 ```ruby
 # bad
 def some_method(some_arr)
