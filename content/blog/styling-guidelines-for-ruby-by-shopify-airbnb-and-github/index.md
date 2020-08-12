@@ -1,12 +1,12 @@
 ---
 title: Styling guidelines for ruby by Shopify,Airbnb, and Github
-date: "2020-08-10T22:12:03.284Z"
+date: "2020-08-12T22:12:03.284Z"
 description: "The best guidelines style for ruby by Shopify and Airbnb"
 ---
 
 <img src="./cover.gif" alt="Smiley face" width="700" height="350" style="text-align:center;vertical-align:middle;margin:50px 0px">
 
-<span style="color: #f9beac; letter-spacing: 0.09em; font-size: 30px; font-weight: 600;"> When </span> we come to the term of best practice or best guidance we properly follow the experts in that field. as a <span style="color: #9b111e; letter-spacing: 0.09em; font-size: 15px; font-weight: 600;"> Ruby </span> developer, my experts are the seniors in big companies like Github, Airbnb, and Shopify who is using <span style="color: #9b111e; letter-spacing: 0.09em; font-size: 15px; font-weight: 600;"> Ruby </span> as the main language and they're the largest companies for <span style="color: #9b111e; letter-spacing: 0.09em; font-size: 15px; font-weight: 600;"> Ruby </span> out there.
+<span style="color: #f9beac; letter-spacing: 0.09em; font-size: 30px; font-weight: 600;"> When </span> we come to the term of best practice or best guidance we properly follow the experts in that field. as a <span style="color: #9b111e; letter-spacing: 0.09em; font-size: 15px; font-weight: 600;"> Ruby </span> developer, my experts are the seniors in big companies like [Github](https://github.com/github), [Airbnb](https://github.com/airbnb/), and [Shopify](https://github.com/Shopify/) who is using <span style="color: #9b111e; letter-spacing: 0.09em; font-size: 15px; font-weight: 600;"> Ruby </span> as the main language and they're the largest companies for <span style="color: #9b111e; letter-spacing: 0.09em; font-size: 15px; font-weight: 600;"> Ruby </span> out there.
 
 Before we go to <span style="color: #9b111e; letter-spacing: 0.09em; font-size: 15px; font-weight: 600;"> Ruby </span> styles I would like to encourage you to use [RuboCop](https://github.com/rubocop-hq/rubocop). the most recommended tool for <span style="color: #9b111e; letter-spacing: 0.09em; font-size: 15px; font-weight: 600;"> Ruby </span> projects. it helps you to adopt the best practice for <span style="color: #9b111e; letter-spacing: 0.09em; font-size: 15px; font-weight: 600;"> Ruby </span> styling. To know how to install and use RuboCop please refer to *[RuboCop's official documentation.](https://docs.rubocop.org/rubocop/)*
 
