@@ -1,7 +1,7 @@
 ---
 title: Styling guidelines for ruby by Shopify,Airbnb, and Github
 date: "2020-08-12T22:12:03.284Z"
-description: "The best guidelines style for ruby by Shopify and Airbnb"
+description: "The best guidelines style for ruby suggested by big companies like Shopify, Airbnb, and Github"
 ---
 
 <img src="./cover.gif" alt="Smiley face" width="700" height="350" style="text-align:center;vertical-align:middle;margin:50px 0px">
