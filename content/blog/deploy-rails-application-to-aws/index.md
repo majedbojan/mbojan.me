@@ -99,3 +99,20 @@ gem install pg -v '1.0.0'
 
 - Generate new one `ssh-keygen -t rsa`
 - Print generated key `cat ~/.ssh/id_rsa.pub`
+
+Before we go to the next step please check if everything is installed perfectly in the previous steps, if it's not please re-check and install again
+```powershell
+~$ nginx -v
+# nginx version: nginx/1.14.0 (Ubuntu)
+~$ rails -v
+# Rails 5.2.2
+~$ bundler -v
+# Bundler version 2.0.1
+~$ mysqld --version
+# mysqld  Ver 5.7.31-0ubuntu0.18.04.1 for Linux on x86_64 ((Ubuntu))
+~$ psql --version
+# psql (PostgreSQL) 12.3 (Ubuntu 12.3-1.pgdg18.04+1)
+~$ redis-server --version
+# Redis server v=4.0.9 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=9435c3c2879311f3
+```
+- <span style="color: #89270a; letter-spacing: 0.03em; font-size: 25px; font-weight: 300;"> Configuring rails with Capistrano </span>
