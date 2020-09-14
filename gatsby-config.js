@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
   pathPrefix: "/myblog",
   siteMetadata: {
@@ -7,7 +11,7 @@ module.exports = {
       summary: `software engineer who loves Ruby on rack, ReactJS and Aspiring to have Elixir on phoenix. I am learning new stuffs and document it to help the community.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://mbojan.me/`,
     social: {
       twitter: `majedbojan`,
     },
@@ -83,6 +87,12 @@ module.exports = {
         rule: {
           include: /\.inline\.svg$/,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: '',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
