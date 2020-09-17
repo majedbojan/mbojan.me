@@ -76,6 +76,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-antd`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -93,7 +94,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint: '',
+        endpoint: process.env.MAILCHIMP_ENDPOINT,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
