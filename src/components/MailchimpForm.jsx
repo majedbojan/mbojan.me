@@ -1,22 +1,51 @@
+import addToMailchimp from "gatsby-plugin-mailchimp"
+import TextField from "@material-ui/core/TextField"
+import Button from "@material-ui/core/Button"
+import { Typography } from "@material-ui/core"
 import React from "react"
-import addToMailchimp from 'gatsby-plugin-mailchimp'
-export default class MyGatsbyComponent extends React.Component {
-    // Since `addToMailchimp` returns a promise, you
-    // can handle the response in two different ways:
-    // Note that you need to send an email & optionally, listFields
-    // these values can be pulled from React state, form fields,
-    // or wherever.  (Personally, I recommend storing in state).
-    _handleSubmit = async (e) => {
-        e.preventDefault();
-        const result = await addToMailchimp(email='xx', listFields='xx')
-        // I recommend setting `result` to React state
-        // but you can do whatever you want
+export default class MailChimpForm extends React.Component {
+    constructor() {
+        super()
+        this.state = { email: "", result: {} }
+    }
+
+    _handleSubmit = async e => {
+        console.log("handle sub")
+        e.preventDefault()
+        const result = await addToMailchimp(this.state.email)
+        console.log("result", result)
+        this.setState({ result: result.result })
+    }
+
+    handleChange = event => {
+        this.setState({ email: event.target.value })
     }
     render() {
-        return (
-            <form onSubmit={this._handleSubmit(email, { listFields })}>
-                ...
-            </form>
-        )
+        return this.state.result == "success" ? (
+            <div>SUCCESS</div>
+        ) : this.state.result == "error" ? (
+            <div>ERROR</div>
+        ) : (
+                    <form onSubmit={this._handleSubmit}>
+                        <TextField
+                            id="outlined-email-input"
+                            label="Email"
+                            type="email"
+                            name="email"
+                            autoComplete="email"
+                            variant="outlined"
+                            onChange={this.handleChange}
+                        />
+                        <br />
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            label="Submit"
+                            type="submit"
+                        >
+                            <Typography variant="button">subscribe to our newsletter</Typography>
+                        </Button>
+                    </form>
+                )
     }
 }

@@ -86,3 +86,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 # TODO
 - https://medium.com/javascript-in-plain-english/how-to-create-a-newsletter-with-mailchimp-gatsby-js-netlify-d48778d5c774
+- https://chrisotto.dev/gatsby-create-an-audience-with-mailchimp/
