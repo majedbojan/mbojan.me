@@ -49,7 +49,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           <Subscribe />
         </footer>
       </article>
-
+      <hr />
       <nav>
         <ul
           style={{
