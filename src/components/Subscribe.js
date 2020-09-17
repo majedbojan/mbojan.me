@@ -2,7 +2,7 @@ import React from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { Form, Input, Button, Divider } from 'antd'
 import { UserOutlined, MailOutlined } from '@ant-design/icons'
-// import 'antd/dist/antd.css'
+import Swal from 'sweetalert2'
 
 export default class Subscribe extends React.Component {
   constructor() {
@@ -13,9 +13,19 @@ export default class Subscribe extends React.Component {
   handleSubmit = async (e) => {
     const result = await addToMailchimp(this.state.email, { FNAME: this.state.name })
     if (result.result === 'error') {
-      alert(`Whoops, ${this.state.name} you're already subscribed!`)
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: `Whoops, ${this.state.name} you're already subscribed!`
+      })
     } else {
-      alert(`Thank you for subscribing ${this.state.name}!`)
+      Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: `Thank you for subscribing ${this.state.name}!`,
+        showConfirmButton: false,
+        timer: 1500
+      })
     }
     this.setState({ result: result })
   }
