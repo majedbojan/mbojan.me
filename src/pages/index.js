@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import MyGatsbyComponent from "../components/MailchimpForm"
+import MailChimpForm from "../components/MailchimpForm"
 import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
@@ -15,7 +15,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
-      {/* <MyGatsbyComponent /> */}
+      <MailChimpForm />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
