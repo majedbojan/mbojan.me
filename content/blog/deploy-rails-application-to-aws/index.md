@@ -116,3 +116,116 @@ Before we go to the next step please check if everything is installed perfectly 
 # Redis server v=4.0.9 sha=00000000:0 malloc=jemalloc-3.6.0 bits=64 build=9435c3c2879311f3
 ```
 - <span style="color: #89270a; letter-spacing: 0.03em; font-size: 25px; font-weight: 300;"> Configuring rails with Capistrano </span>
+
+[Capistrano](https://github.com/capistrano/capistrano) is a deployment automation tool built on Ruby, Rake, and SSH. Although Capistrano itself is written in Ruby, it can easily be used to deploy projects of any language or framework, be it Rails, Java, React, or PHP
+
+#### 1) Install the Capistrano gems
+```ruby
+group :development do
+  gem 'capistrano', '~> 3.9'
+  gem 'capistrano-db-tasks', require: false
+  gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano-rvm'
+  gem 'capistrano3-puma'
+end
+```
+NOTE: if you're using Resque you will need to add `capistrano-resque` as well
+```ruby
+gem 'capistrano-resque', '~> 0.2.3', require: false
+```
+Run `bundle` than `bundle exec cap install`
+
+This creates all the necessary configuration files and directory structure for a Capistrano-enabled project with two stages, staging and production
+
+```pwoershell
+├── Capfile
+├── config
+│   ├── deploy
+│   │   ├── production.rb
+│   │   └── staging.rb
+│   └── deploy.rb
+└── lib
+    └── capistrano
+            └── tasks
+
+```
+
+Please compare your `Capfile` with following and add required gems here as well
+```ruby
+# frozen_string_literal: true
+
+# Load DSL and set up stages
+require 'capistrano/setup'
+
+# Include default deployment tasks
+require 'capistrano/deploy'
+
+require 'capistrano/scm/git'
+install_plugin Capistrano::SCM::Git
+
+# Include tasks from other gems included in your Gemfile
+require 'capistrano/rvm'
+require 'capistrano/bundler'
+require 'capistrano/rails/migrations'
+require 'capistrano/puma'
+require 'capistrano-resque'
+require 'capistrano-db-tasks'
+
+install_plugin Capistrano::Puma
+install_plugin Capistrano::Puma::Nginx
+
+# Load custom tasks from `lib/capistrano/tasks` if you have any defined
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
+
+```
+#### 2) SetUp deploy.rb
+Replace the values in `deploy.rb` with correct values
+```ruby
+# config valid for current version and patch releases of Capistrano
+lock '~> 3.11.0'
+
+set :application, 'application_name'
+set :repo_url, 'git@example.com:me/my_repo.git'
+set :rails_env, fetch(:stage)
+append :rvm_map_bins, 'rails'
+
+set :deploy_to, "/var/www/html/#{fetch(:application)}"
+
+set :format_options, command_output: true, log_file: 'log/capistrano.log', color: :auto, truncate: :false
+
+set :rvm_type, :user
+set :rvm_ruby_version, '2.5.0@gemset'
+
+append :linked_files, 'config/database.yml', 'config/master.key'
+
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'storage'
+
+set :keep_releases, 5
+```
+Once you updated `deploy.rb` file create `database.yml` and `master.key` in the deployment path and run `cap production deploy:check` to check if there are any other configuration missing, if everything is worked fine run `cap production deploy`, Here we go.
+Our app should be deployed to production now!
+#### 3) SetUp deployment environments and nginx configuration
+Rails have multiple environments that mean we can deploy our code in multiple servers with multiple domain, `test`, `staging`, and `production` are most environment used in the rails community.
+
+Let's update our `config/deploy/production.rb` with the correct data and upload Nginx config to the server
+
+```ruby
+# frozen_string_literal: true
+
+set :branch, 'master'
+set :resque_rails_env, 'production'
+role :resque_worker, 'ip.000.00.ip'
+role :resque_scheduler, 'ip.000.00.ip'
+
+set :workers, '*' => 1
+set :nginx_server_name, "your-domain.com #{fetch(:application)}.local"
+
+server 'ip.000.00.ip',
+        user:  'ubuntu',
+        roles: %w[web app db]
+```
+
+Run, `cap production puma:nginx_config` to setup nginx configuration and restart the nginx services in the server
+`sudo service nginx restart`
+
+Open the browser and specify the application address. `www.your-domain.com`
