@@ -1,6 +1,6 @@
 ---
 title: Deploy rails application to AWS
-date: "2020-09-15T22:12:03.284Z"
+date: "2020-09-22T22:12:03.284Z"
 description: "How to deploy Rails aplication on AWS EC2 + Ubuntu + Nginx + capistrano"
 ---
 
