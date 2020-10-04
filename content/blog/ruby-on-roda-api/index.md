@@ -427,8 +427,8 @@ curl -X GET \
 Here is the [Complete Code](https://github.com/MajedBojan/roda_api.git)
 
 ## References
-[jeremyevans's sequel](https://github.com/jeremyevans/sequel)
-[jeremyevans's roda]()
-[HashRoutes](https://roda.jeremyevans.net/rdoc/classes/Roda/RodaPlugins/HashRoutes.html)
-[mastering-roda](https://fiachetti.gitlab.io/mastering-roda/#get-and-post)
-[simple-roda-blog-tutorial](https://mrcook.uk/simple-roda-blog-tutorial)
+- [jeremyevans's sequel](https://github.com/jeremyevans/sequel)
+- [jeremyevans's roda](https://github.com/jeremyevans/roda)
+- [HashRoutes](https://roda.jeremyevans.net/rdoc/classes/Roda/RodaPlugins/HashRoutes.html)
+- [mastering-roda](https://fiachetti.gitlab.io/mastering-roda/#get-and-post)
+- [simple-roda-blog-tutorial](https://mrcook.uk/simple-roda-blog-tutorial)
