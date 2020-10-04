@@ -267,7 +267,7 @@ The next step is to create CRUD operations for our classes, RODA provides a plug
 
 let’s create the controller’s files for `categories, items, and orders`
 
-``powershell
+```powershell
   touch app/controllers/api/v1/categories.rb app/controllers/api/v1/items.rb app/controllers/api/v1/orders.rb
 ```
 
